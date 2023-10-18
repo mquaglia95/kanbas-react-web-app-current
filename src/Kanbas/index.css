@@ -1,0 +1,68 @@
+.list-group-item.wd-kanbas-nav {
+    background: black;
+    color: red;
+  }
+
+.list-group-item.wd-kanbas-nav.active {
+    background: white;
+    color: red; 
+    border-color: white;
+  }
+
+.wd-dashboard-grid .col {
+    width: 270px;
+    height: 375px;
+}
+
+.wd-dashboard-grid .row {
+    margin-bottom: 10px;
+}
+
+.wd-main-content-spacing {
+    margin-left: 25px;
+}
+
+.list-group-item.wd-course-nav {
+    background: white;
+    color: red; 
+    margin-right: 30px;
+    border-color: white;
+
+}
+
+.list-group-item.wd-course-nav.active{
+    background: white;
+    color: black; 
+    border-color: white;
+    border-left: 3px solid black;
+}
+
+.list-group-item.wd-modules {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: lightgray;
+}
+
+.wd-buttons-to-right {
+    align-items: right;
+}
+
+.col.wd-status-button-spacing{
+    margin: 5px;
+}
+
+.col-sm.wd-buttons-right {
+    text-align: right;
+  }
+
+.col-sm.wd-search-size {
+    width: 500px;
+}
+
+.col.wd-gen-spacing {
+    margin-top: 40px;
+}
+
+.row.wd-gen-spacing {
+    margin-top: 40px;
+}

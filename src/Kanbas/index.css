@@ -6,8 +6,13 @@
 .list-group-item.wd-kanbas-nav.active {
     background: white;
     color: red; 
-    border-color: white;
+    border-color: #ffffff;
   }
+
+.wd-dashboard-grid {
+    display: grid;
+    gap: 30px;
+}  
 
 .wd-dashboard-grid .col {
     width: 270px;
@@ -19,6 +24,10 @@
 }
 
 .wd-main-content-spacing {
+    margin-left: 25px;
+}
+
+.wd-card-spacing {
     margin-left: 25px;
 }
 
@@ -65,4 +74,35 @@
 
 .row.wd-gen-spacing {
     margin-top: 40px;
+}
+
+.card {
+    margin-top: 10px;
+}
+
+.card-img-top {
+    object-fit: contain;
+    max-width: 240px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    margin: 3px;
+}
+
+.wd-module-input-title {
+    width: 100%;
+}
+
+.wd-module-input-description {
+    width: 100%;
+    
+}
+
+.form-control {
+    margin-bottom: 5px;
 }

@@ -3,8 +3,12 @@ import axios from "axios";
 // const COURSES_URL = "http://localhost:4000/api/courses";
 // const MODULES_URL = "http://localhost:4000/api/modules";
 
-const COURSES_URL = 'https://kanbas-node-server-app-k658.onrender.com/api/courses';
-const MODULES_URL = 'https://kanbas-node-server-app-k658.onrender.com/api/modules';
+// const COURSES_URL = 'https://kanbas-node-server-app-k658.onrender.com/api/courses';
+// const MODULES_URL = 'https://kanbas-node-server-app-k658.onrender.com/api/modules';
+
+const API_BASE = process.env.REACT_APP_API_BASE;
+const COURSES_URL = `${API_BASE}/courses`;
+const MODULES_URL = `${API_BASE}/modules`;
 
 
 

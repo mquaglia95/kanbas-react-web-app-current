@@ -1,8 +1,34 @@
+// import ModuleList from "./ModuleList";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
+// function Modules() {
+
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router";
 import ModuleList from "./ModuleList";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { setModules } from "./modulesReducer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 function Modules() {
+  const dispatch = useDispatch();
+  const { courseId } = useParams(); // Assuming you are using React Router
+
+  // Fetch modules data from your API when the component mounts
+  useEffect(() => {
+    fetch(`http://localhost:4000/api/courses/${courseId}/Modules`)
+      .then((response) => response.json())
+      .then((data) => {
+        // Dispatch the action to update the Redux store with the modules
+        dispatch(setModules(data));
+      })
+      .catch((error) => {
+        console.error("Error fetching modules:", error);
+      });
+  }, [dispatch, courseId]);
+
   return (
 <div>
     <div className="d-flex justify-content-end align-items-center">

@@ -53,7 +53,7 @@ function Dashboard(
       <div className="row row-cols-1 row-cols-md-3 g-4 wd-dashboard-grid">
         {courses?.map((course) => (
           <CardLayout
-            class="wd-card-spacing"
+            className="wd-card-spacing"
             key={course._id}
             courses={course}
             onDelete={deleteCourse}

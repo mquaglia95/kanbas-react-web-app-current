@@ -1,17 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+
 
 function CardLayout({ courses, onDelete, onEdit, isEditing, setIsEditing, onEditPull, onUpdate }) {
+  const navigate = useNavigate();
+
+
   if (!courses) {
     return null;
   }
 
+  const navigateToCoursePage = () => {
+    // Use the history object to navigate to the course page
+    navigate(`/Kanbas/Courses/${courses.number}/Home`);
+  };
+
   return (
     <div className="col">
       <div className="card h-100">
-      <Link to={`/Kanbas/Courses/${courses._id}`} className="card-link">
+        <div onClick={navigateToCoursePage} className="card-link">
+      {/* <Link to={`/Kanbas/Courses/${courses.number}/modules`} className="card-link"> */}
+        
           <img src="/images/Northeastern.png" className="card-img-top" alt="Course Logo" />
             <div className="card-body">
               <h5 className="card-title">{courses.name}</h5>
@@ -22,7 +34,8 @@ function CardLayout({ courses, onDelete, onEdit, isEditing, setIsEditing, onEdit
                 <FontAwesomeIcon icon={faBook} />
               </p>
             </div>
-          </Link>
+          </div>
+          {/* </Link> */}
           {isEditing ? (
             <>
               <input

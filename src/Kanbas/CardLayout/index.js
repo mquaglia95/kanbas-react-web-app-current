@@ -14,7 +14,6 @@ function CardLayout({ courses, onDelete, onEdit, isEditing, setIsEditing, onEdit
   }
 
   const navigateToCoursePage = () => {
-    // Use the history object to navigate to the course page
     navigate(`/Kanbas/Courses/${courses.number}/Home`);
   };
 
@@ -22,8 +21,6 @@ function CardLayout({ courses, onDelete, onEdit, isEditing, setIsEditing, onEdit
     <div className="col">
       <div className="card h-100">
         <div onClick={navigateToCoursePage} className="card-link">
-      {/* <Link to={`/Kanbas/Courses/${courses.number}/modules`} className="card-link"> */}
-        
           <img src="/images/Northeastern.png" className="card-img-top" alt="Course Logo" />
             <div className="card-body">
               <h5 className="card-title">{courses.name}</h5>
@@ -35,7 +32,6 @@ function CardLayout({ courses, onDelete, onEdit, isEditing, setIsEditing, onEdit
               </p>
             </div>
           </div>
-          {/* </Link> */}
           {isEditing ? (
             <>
               <input

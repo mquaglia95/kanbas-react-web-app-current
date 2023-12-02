@@ -1,5 +1,5 @@
 import KanbasNavigation from "./KanbasNavigation";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, Link } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import "./index.css"
@@ -8,6 +8,10 @@ import db from "./Database";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
+import Signin from "./users/signin";
+import Account from "./users/account";
+import UserTable from "./users/table";
+import Signup from "./users/signup";
 
 
 function Kanbas() {
@@ -62,29 +66,7 @@ function Kanbas() {
   });
 
   const [isEditing, setIsEditing] = useState(false);
-
-
-  // const addNewCourse = () => {
-  //   setCourses([...courses, { ...course, _id: new Date().getTime() }]);
-  // };
-
-  // const deleteCourse = (courseId) => {
-  //   setCourses(courses.filter((course) => course._id !== courseId));
-  // };
-
-  // const editCourse = (edCourse) => {
-  //   setCourses((currentCourse) =>
-  //     currentCourse.map((c) => (c._id === edCourse._id ? edCourse : c))
-  //   );
-  // };
-
-  // const onUpdate = (updatedCourse) => {
-  //   setCourses((currentCourses) =>
-  //     currentCourses.map((c) => (c._id === updatedCourse._id ? updatedCourse : c))
-  //   );
-  //   setIsEditing(false);
-  // };
-
+  
   return (
     <Provider store={store}>
       <div className="d-flex">
@@ -94,7 +76,11 @@ function Kanbas() {
         <div className="wd-main-content-spacing">
         <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account" element={<h1>Account</h1>} />
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/Account" element={<Account />} />
+            <Route path="/account/:id" element={<Account />} />
+            <Route path="/admin/users" element={<UserTable />} />
             <Route path="Dashboard" element={<Dashboard 
               courses={courses}
               course={course}

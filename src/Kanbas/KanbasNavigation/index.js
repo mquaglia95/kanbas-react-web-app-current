@@ -8,6 +8,8 @@ const iconSizing = "3x"
 function KanbasNavigation() {
     const links = [
         { name: "Account", icon: <FontAwesomeIcon icon={faUserCircle} size={iconSizing}/>},
+        { name: "Signin", icon: <FontAwesomeIcon icon={faUserCircle} size={iconSizing}/>},
+        { name: "Signup", icon: <FontAwesomeIcon icon={faUserCircle} size={iconSizing}/>},
         { name: "Dashboard", icon: <FontAwesomeIcon icon={faGauge} size={iconSizing}/>},
         { name: "Courses", icon: <FontAwesomeIcon icon={faBook} size={iconSizing}/>},
         { name: "Groups", icon: <FontAwesomeIcon icon={faUserFriends} size={iconSizing}/>},

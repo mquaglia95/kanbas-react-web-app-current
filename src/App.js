@@ -5,6 +5,7 @@ import {HashRouter} from "react-router-dom";
 import {Routes, Route, Navigate} from "react-router";
 import Breadcrumb from "./Kanbas/Breadcrumb/Breadcrumb";
 import cors from "cors";
+
 function App() {
   return (
     <HashRouter>
